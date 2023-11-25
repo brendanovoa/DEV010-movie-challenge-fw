@@ -1,0 +1,22 @@
+.filtersSection{
+    margin: 0;
+    background-color: #FFDE17;
+    width: auto;
+    height: 20vh;
+    display: flex;
+    gap: 100px;
+    padding: 2rem;
+    padding-top: 4rem;
+    justify-content: space-evenly;
+    .filter{
+        
+        select{
+            width: 13rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            border: none;
+            box-shadow: 0.5rem 0.5rem black;
+            text-indent: 1rem;
+        }
+    }
+}

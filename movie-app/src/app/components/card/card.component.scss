@@ -1,0 +1,17 @@
+.card{
+    background-color: white;
+    width: 20rem;
+    height: 32rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    img{
+        width: 18rem;
+        align-self: center;
+    }
+    p{
+        padding: 1rem;
+        font-size: var(--fuente-pequena);
+    }
+}

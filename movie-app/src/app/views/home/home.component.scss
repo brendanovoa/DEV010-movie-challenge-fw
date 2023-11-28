@@ -1,12 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-.homeSection {
-    background-image: url(../../../assets/background-logo.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.homeSection{
     width: 100vw;
     height: 100vh;
+    background-color: var(--color-primario);
+    .homeImg {
+        img{
+            width: 100%;
+        }
+    }
+    .filterImg{
+        background-color: var(--color-secundario);
+        img{
+            width: 100%;
+            // position:absolute;
+            // z-index: -1;
+        }
+    }
 }
+
+

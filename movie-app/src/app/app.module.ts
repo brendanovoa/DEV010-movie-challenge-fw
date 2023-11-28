@@ -11,6 +11,7 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { MovieDetailsComponent } from './views/movie-details/movie-details.component';
 import { CardComponent } from './components/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     FiltersComponent,
     MoviesComponent,
     MovieDetailsComponent,
-    CardComponent
+    CardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

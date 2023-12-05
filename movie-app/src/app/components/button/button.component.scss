@@ -1,0 +1,21 @@
+.btn{
+    // position: absolute;
+    // margin-top: 85vh;
+    // margin-top: 5%;
+    // margin-left: 80%;
+    img{
+        width: 10rem;
+    }
+    img:hover {
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

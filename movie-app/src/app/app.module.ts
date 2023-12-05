@@ -12,6 +12,9 @@ import { MovieDetailsComponent } from './views/movie-details/movie-details.compo
 import { CardComponent } from './components/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PaginatorComponent } from './components/paginator/paginator.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -22,13 +25,16 @@ import { FooterComponent } from './components/footer/footer.component';
     MoviesComponent,
     MovieDetailsComponent,
     CardComponent,
-    FooterComponent
+    FooterComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

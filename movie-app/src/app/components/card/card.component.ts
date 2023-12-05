@@ -21,3 +21,7 @@ export class CardComponent implements OnInit {
     this.imageUrl = posterPath ? `https://image.tmdb.org/t/p/w154${posterPath}` : '../../../assets/not-available.png';
   }
 }
+
+// Cuando se utiliza [style.background-image]="imageUrl", Angular advertirá que estás intentando aplicar una cadena de estilo directamente, lo que puede ser vulnerable a ataques de inyección de código.
+// SafeStyle indica a Angular que la cadena es segura y ha sido verificada contra ataques XSS. Esto se logra utilizando DomSanitizer para convertir la cadena en un objeto seguro antes de asignarlo a una variable. 
+// bypassSecurityTrustStyle ignores security while sanitize(SecurityContext.STYLE, style) reinforces security.

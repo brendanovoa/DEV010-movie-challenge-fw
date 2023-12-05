@@ -1,3 +1,5 @@
+// Utilizar una interfaz para representar la respuesta de la API que proporciona un contrato claro sobre la estructura que esperas en la respuesta.
+
 export interface Movie {
     adult: boolean;
     backdrop_path: string;
@@ -13,4 +15,14 @@ export interface Movie {
     video: boolean;
     vote_average: number;
     vote_count: number;
+    total_pages: number;
+    total_results: number;
+    page: number;
+}
+
+export interface APIresponse {     
+    page: number;
+    results: Movie[];
+    total_pages: number; // 41259
+    total_results: number; // 825179
 }

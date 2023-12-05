@@ -1,0 +1,11 @@
+<div class="paginator">
+    <mat-paginator class="mat-elevation-z8"
+    [length] = 'total_length'
+    [pageSize] = 'page_size'
+    [showFirstLastButtons] = 'true'
+    [pageSizeOptions] = '[20]'
+    [pageIndex] = 'current_page -1'
+    aria-label="Select page"
+    (page) = 'handlePageEvent($event)'> 
+    </mat-paginator>
+</div>

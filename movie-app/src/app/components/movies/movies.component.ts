@@ -20,4 +20,8 @@ export class MoviesComponent implements OnInit {
     this.movies = newMovies;
   }
   /*Esta función se utiliza para manejar el cambio en la lista de películas. Cuando el componente Paginator emite un evento indicando que se han cargado nuevas películas, esta función se activa. Su propósito es actualizar la lista de películas en el componente Movies, lo que lleva a una actualización en la vista.*/
+
+  /*getMovieDetails(id: number){
+    window.open(`/movie-details?id=${id}`, '_blank');
+  }*/
 }

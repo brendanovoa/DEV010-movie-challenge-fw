@@ -26,6 +26,9 @@ export class HomeComponent implements OnInit {
   //default_sort: string = 'popularity.desc';
   //default_filter: string = '28';
 
+  //total_pages: number; // 41259
+  //total_results: number; // 825179
+
   constructor(private service: DataService){}
 
   ngOnInit(): void {

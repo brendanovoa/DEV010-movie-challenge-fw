@@ -15,9 +15,7 @@ export class PaginatorComponent implements OnInit {
   movies: Movie[] = [];
   current_page: number = 1;
   page_size: number = 20;
-  total_length: number = 40586;
-  nextPageLabel = 'Next page';
-  previousPageLabel = 'Previous page';
+  total_length: number = 10000; //API total_results
   //page: number[] = [];
   //pageSizeOptions = [20];
   //selected_sort: string = '';
@@ -25,6 +23,9 @@ export class PaginatorComponent implements OnInit {
   //release_year: string = '';
   //default_sort: string = 'popularity.desc';
   //default_filter: string = '28';
+
+  //total_pages: number; // 41259
+  //total_results: number; // 825179
 
   constructor(private service: DataService ) { }
 
@@ -40,7 +41,7 @@ export class PaginatorComponent implements OnInit {
     this.service.getMovies(this.current_page).subscribe((resp) => {
       console.log(resp);
       this.movies = resp.results;
-      this.total_length = resp.total_results;
+      this.total_length = 10000;
       this.moviesChanged.emit(this.movies); // Emitir las películas al componente padre
     });
   }

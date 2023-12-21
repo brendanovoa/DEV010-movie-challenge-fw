@@ -1,0 +1,83 @@
+.movieDetailsContainer{
+    width: 100vw;
+    height: 90vh;
+    background-color: var(--color-secundario);
+    background-image: url(../../../assets/background-amarillo-01.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    align-content: center;
+    
+    .movieDetailsCard{
+        background-color: white;
+        width: 80vw;
+        height: 60vh;
+        
+        padding: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        .moviePoster{
+            align-self: center;
+            padding-left: 6rem;
+        }
+        .movieDetails{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10rem;
+            .movieTitle{
+                font-size: 4rem;
+            }
+            .movieTexts{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 3rem;
+            }
+            .movieGenres{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 3rem;
+            }
+            .movieDescription{
+                font-size: 3rem;
+                text-align: justify;
+                gap: 4rem;
+            }
+            .movieRatings{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 3rem;
+            }
+            .movieProduction{
+                display: flex;
+                flex-direction: row;
+                font-size: 3rem;
+                ul {
+                    list-style: none;
+                    width: 100%;
+                    li {
+                        display: inline;
+                        gap: 2rem;
+                        
+                        img{
+                            height: 3rem;
+                            margin-right: 4rem;
+                        }
+                    }
+                }
+            }
+            .movieMoney{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 3rem;
+            }
+        }
+    }
+}

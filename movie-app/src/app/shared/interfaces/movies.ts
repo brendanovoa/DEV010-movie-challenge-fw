@@ -18,6 +18,8 @@ export interface Movie {
     total_pages: number;
     total_results: number;
     page: number;
+    production_companies: any[];
+    genres: any[];
 }
 
 export interface APIresponse {     
@@ -25,4 +27,13 @@ export interface APIresponse {
     results: Movie[];
     total_pages: number; // 41259
     total_results: number; // 825179
+}
+
+export interface GenresList {
+    genres: Genre[];
+}
+
+export interface Genre {
+    id: number;
+    name: string;
 }

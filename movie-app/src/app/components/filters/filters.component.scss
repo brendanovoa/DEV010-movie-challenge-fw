@@ -19,6 +19,8 @@
             box-shadow: 0.5rem 0.5rem black;
             text-indent: 1rem;
             font-size: var(--fuente-pequena);
+            cursor: pointer;
+            color: black;
         }
     }
     .btn-go{
@@ -26,6 +28,7 @@
         flex-direction: column;
         align-items: center;
         letter-spacing: 0;
+        cursor: pointer;
         p{
             font-weight: 500;
             padding-top: 0.5rem;

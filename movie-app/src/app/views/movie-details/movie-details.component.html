@@ -21,7 +21,7 @@
             </div>
             <div class="movieGenres">
                 <h2>Genres: </h2>
-                <p>{{ data?.genres.name }}</p>
+                <p *ngFor="let genre of data?.genres">{{ genre.name }}</p>
             </div>
             <article class="movieRatings">
                 <h2>Vote Average: </h2>

@@ -2,10 +2,19 @@
     <div class="homeImg">
         <img src="../../../assets/background-logo.png" alt="Movie Club background">
     </div>
-    <app-filters></app-filters>
+    <div class="blackLine"></div>
     <div class="filterImg">
         <img id="filterImage" src="../../../assets/Moonrise-Kingdom.png" alt="Moonrise kingdom image">
     </div>
-    <app-movies [movies]="movies"></app-movies>
+    <div class="blackLine"></div>
+    <app-filters (genreSelected)="onGenreSelected($event)" (sortSelected)="onSelectedSort($event)"></app-filters>
+    <section class="moviesSection">
+        <app-paginator (pageChanged)="handlePageEvent($event)"></app-paginator>
+        <div class="cards-container">
+            <app-card *ngFor="let movie of movies" [movie]="movie"></app-card>
+            <!-- (click) = 'getMovieDetails(item.id)' -->
+        </div>
+    </section>
+    <!-- <app-movies [movies]="movies"></app-movies> -->
     <app-footer></app-footer>
 </section>

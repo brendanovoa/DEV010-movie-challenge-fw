@@ -1,1 +1,68 @@
-<p>movie-details works!</p>
+<section class="movieDetailsContainer">
+    <div class="movieDetailsCard">
+        <div class="moviePoster">
+            <img [src]="imageUrl" alt="">
+        </div>
+        <div class="movieDetails">
+            <div class="movieTitle">
+                <h1>{{ data?.title }}</h1>
+            </div>
+            <div class="movieDescription">
+                <h2>{{ data?.tagline }}</h2><br>
+                <p>{{ data?.overview }}</p>
+            </div>
+            <div class="movieTexts">
+                <h2>Release Date: </h2>
+                <p>{{ data?.release_date }}</p>
+                <h2>Status: </h2>
+                <p>{{ data?.status }}</p>
+                <h2>Original Language: </h2>
+                <p>{{ data?.original_language }}</p>
+            </div>
+            <div class="movieGenres">
+                <h2>Genres: </h2>
+                <p *ngFor="let genre of data?.genres">{{ genre.name }}</p>
+            </div>
+            <article class="movieRatings">
+                <h2>Vote Average: </h2>
+                <p>{{ data?.vote_average }}</p>
+                <h2>Vote Count: </h2>
+                <p>{{ data?.vote_count }}</p>
+                <h2>Popularity: </h2>
+                <p>{{ data?.popularity }}</p>
+            </article>
+            <article class="movieProduction">
+                <h2>Production Companies: </h2>
+                <ul>
+                    <li *ngFor="let company of production_companies">
+                        <img [src]="getLogoUrl(company.logo_path)" alt="{{company.name}} Logo">
+                    </li>
+                </ul>
+            </article>
+            <article class="movieMoney">
+                <h2>Budget: </h2>
+                <p>{{ data?.budget }}</p>
+                <h2>Revenue: </h2>
+                <p>{{ data?.revenue }}</p>
+            </article>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>
+
+<!-- backdrop_path: "/k1KrbaCMACQiq7EA0Yhw3bdzMv7.jpg"
+
+genres: Array(5)
+0: {id: 16, name: 'Animation'}
+1: {id: 10751, name: 'Family'}
+2: {id: 10402, name: 'Music'}
+3: {id: 14, name: 'Fantasy'}
+4: {id: 35, name: 'Comedy'}
+production_companies: Array(1)
+0: {id: 521, logo_path: '/kP7t6RwGz2AvvTkvnI1uteEwHet.png', name: 'DreamWorks Animation', origin_country: 'US'}
+length: 1
+[[Prototype]]: Array(0)
+production_countries: Array(1)
+0: {iso_3166_1: 'US', name: 'United States of America'}
+length: 1
+[[Prototype]]: Array(0) -->

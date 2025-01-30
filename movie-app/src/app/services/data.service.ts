@@ -12,12 +12,18 @@ export class DataService {
   // Definir el Endpoint al que conectarse
   private API = 'https://api.themoviedb.org/3/';
   private apiKey = '3bf3e2fd0b4078b4ce8778ca08a057cd';
+  private apiReadToken = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYmYzZTJmZDBiNDA3OGI0Y2U4Nzc4Y2EwOGEwNTdjZCIsIm5iZiI6MTcwMDE1Mzg2OC4wMjksInN1YiI6IjY1NTY0YTBjN2YwNTQwMDBmZjM2M2U0NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8jNxFPWWiNMDCY4QQDo23fkbVWjEqIdVUMDza82_IF8';
+
+  // 'https://api.themoviedb.org/3/movie/11' \
+  // 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYmYzZTJmZDBiNDA3OGI0Y2U4Nzc4Y2EwOGEwNTdjZCIsIm5iZiI6MTcwMDE1Mzg2OC4wMjksInN1YiI6IjY1NTY0YTBjN2YwNTQwMDBmZjM2M2U0NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8jNxFPWWiNMDCY4QQDo23fkbVWjEqIdVUMDza82_IF8'
 
   // Inicializar el constructor httpclient
   constructor(private http: HttpClient) { }
 
   // Crear el método para hacer la petición 
   public getMovies(page: number, genreId?: number | null, selectedSort: string = 'popularity.desc'): Observable<APIresponse>{ 
+
+    console.log(page, genreId, selectedSort);
     
     let params = new HttpParams()
       .set('api_key', this.apiKey)
@@ -39,7 +45,9 @@ export class DataService {
     return this.http.get<APIresponse>(`${this.API}discover/movie`, { params })
   }
 
+  // YA NO CONECTA CON LA API THEMOVIEDB
   public getGenresList(): Observable<GenresList>{
+    console.log('GenresList');
     return this.http.get<GenresList>(`${this.API}/genre/movie/list?api_key=${this.apiKey}`)
   }
 
